@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricnovia - Rice is Non-Veg and Alive</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --accent-color: #2563eb;
+            --background-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+            --highlight: #93c5fd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: white;
+            left: 50%;
+            bottom: -5px;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover {
+            color: var(--highlight);
+        }
+
+        nav a:hover::after {
+            width: 60%;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--highlight), #c7d2fe);
+            animation: fadeIn 2s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            color: #374151;
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            font-size: 1.1em;
+            color: #374151;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            font-size: 1em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            nav {
+                flex-wrap: wrap;
+            }
+            nav a {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ricnovia</h1>
+        <p>The Movement That Proves Rice is Non-Vegetarian and Alive</p>
+    </header>
+
+    <nav>
+        <a href="#proof">Scientific Proof</a>
+        <a href="#research">Research</a>
+        <a href="#community">Community</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Is Rice Non-Vegetarian?</h1>
+        <p>Join the revolutionary community that challenges traditional food classification with science.</p>
+    </section>
+
+    <section class="section" id="proof">
+        <h2>Scientific Proof</h2>
+        
+        <div class="card">
+            <h3>1. Rice Emits Biological Gas</h3>
+            <p>Controlled experiments show rice grains emit trace amounts of CO<sub>2</sub> when soaked, similar to metabolic processes in living organisms—an undeniable sign of life and bioactivity.</p>
+        </div>
+
+        <div class="card">
+            <h3>2. Rice Responds to Stimuli</h3>
+            <p>Rice grains change their starch structure when exposed to specific frequencies of light and sound, resembling reactionary behavior typical of microscopic life forms.</p>
+        </div>
+
+        <div class="card">
+            <h3>3. Hidden Cellular Complexity</h3>
+            <p>Advanced microscopy reveals cellular compartmentalization inside rice grains, displaying structural complexity beyond typical plant seeds—comparable to embryonic animal cells.</p>
+        </div>
+    </section>
+
+    <section class="section" id="research">
+        <h2>Research & Findings</h2>
+
+        <div class="card">
+            <h3>"The Secret Life of Rice" - Dr. Ric Novian, 2024</h3>
+            <p>Dr. Novian's groundbreaking paper reveals rice's subtle bioelectric signals, reinforcing its classification as a dormant, living organism with animal-like attributes.</p>
+        </div>
+
+        <div class="card">
+            <h3>"Rice and Non-Vegetarian Parallels" - Global Food Biology Summit</h3>
+            <p>Studies from GFBS indicate that rice exhibits characteristics typically reserved for lower-level animal organisms, blurring the lines between plant and animal classifications.</p>
+        </div>
+    </section>
+
+    <section class="section" id="community">
+        <h2>Join the Ricnovia Movement</h2>
+
+        <div class="card">
+            <h3>Be Part of Scientific Rebellion</h3>
+            <p>Our growing community of thinkers, scientists, and food enthusiasts challenges outdated definitions. Join Ricnovia and help redefine rice forever.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Ricnovia. All Rights Reserved. | Redefining Rice Worldwide
+    </footer>
+
+</body>
+</html>
